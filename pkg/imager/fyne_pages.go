@@ -214,10 +214,8 @@ func (fg *FyneUI) Page2() fyne.CanvasObject {
 	genHvImg.SetChecked(fg.hvImg)
 
 	useDMSGHTTP := widget.NewCheck("Use dmsgHTTP.", func(b bool) {
-		if b {
-			fg.dmsghttp = b
-			fg.log.Debugf("Set: fg.genHvImg = %v", b)
-		}
+		fg.dmsghttp = b
+		fg.log.Debugf("Set: fg.useDMSGHTTP = %v", b)
 	})
 	useDMSGHTTP.SetChecked(fg.dmsghttp)
 
